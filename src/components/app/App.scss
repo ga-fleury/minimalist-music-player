@@ -15,8 +15,11 @@
   padding: 5px 9px;
   border: $color-detail 2px solid;
   border-radius: 5px;
-  // background: #282c34;
-  // box-shadow: 5px 5px 10px #1f2228, -5px -5px 10px #313640;
+
+  &:hover {
+    border: lighten($color-detail, 10%) 2px solid;
+    fill: lighten($color-detail, 10%);
+  }
 }
 
 .player {
@@ -51,14 +54,20 @@
     border: $color-detail 2px solid;
     border-radius: 5px;
     color: $color-detail;
-    // background: #282c34;
-    // box-shadow: 5px 5px 10px #1f2228, -5px -5px 10px #313640;
+
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
     &--active {
       color: $color-desc;
       border: $color-desc 2px solid;
       background: #282c34;
       box-shadow: inset 5px 5px 10px #1f2228, inset -5px -5px 10px #313640;
+    }
+
+    &:hover {
+      border: lighten($color-detail, 10%) 2px solid;
+      color: lighten($color-detail, 10%);
     }
   }
   &__icon {
@@ -98,23 +107,26 @@
   &__total-time {
     align-self: flex-end;
     color: $color-detail;
-    font-size: 1rem;
+    font-size: .9rem;
+    margin-bottom: .2rem;
   }
   &__current-time {
     color: $color-detail;
-    font-size: 1rem;
+    font-size: .9rem;
+    margin-top: .2rem;
   }
   &__progress-bar {
-    background-color: $color-detail;
-    height: 0.5rem;
+    height: 0.7rem;
     border-radius: 10px;
     width: 100%;
+    background: $color-bg;
+    box-shadow: inset 1px 1px 2px #1a1c21, inset -1px -1px 2px #363c47;
 
     &-current {
-      height: 0.5rem;
-      width: 10%;
-      background-color: $color-title;
-      margin-top: -0.5rem;
+      height: 0.7rem;
+      width: 0%;
+      background-color: $color-desc;
+      margin-top: -0.7rem;
       border-radius: 10px;
     }
   }
