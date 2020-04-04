@@ -1,0 +1,33 @@
+// $color-bg: #282c34;
+// $color-title: #525666;
+// $color-desc: #828299;
+// $color-detail: #B8B5CC;
+
+$color-bg: #282c34;
+$color-title: #B8B5CC;
+$color-desc: #828299;
+$color-detail: #525666;
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
