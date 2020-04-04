@@ -24,15 +24,25 @@ class App extends React.Component {
         duration: "3:50",
         image: "https://i.imgur.com/KzJsVQH.png",
       },
+      {
+        title: "Arty Boy - Tennyson Remix",
+        artist: "Flight Facilities, Emma Louise, Tennyson",
+        duration: "2:23",
+        image: "https://i.imgur.com/KzJsVQH.png",
+      },
     ],
   };
 
   handleNext = () => {
-    this.state.index === this.state.musics.length - 1 ? this.setState({ index: 0}) : this.setState({ index: this.state.index + 1 });
+    this.state.index === this.state.musics.length - 1
+      ? this.setState({ index: 0 })
+      : this.setState({ index: this.state.index + 1 });
   };
 
   handleBack = () => {
-    this.state.index === 0 ? this.setState({ index: this.state.musics.length - 1}) : this.setState({ index: this.state.index - 1 });
+    this.state.index === 0
+      ? this.setState({ index: this.state.musics.length - 1 })
+      : this.setState({ index: this.state.index - 1 });
   };
 
   render() {
@@ -81,9 +91,9 @@ class Visual extends React.Component {
           </div>
         </section>
         <div className="player__info-wrap">
-          <h1 className="music__title">
+          <p className="music__title">
             {this.props.musicList[this.props.musicIndex].title}
-          </h1>
+          </p>
           <p className="music__artist">
             {this.props.musicList[this.props.musicIndex].artist}
           </p>
@@ -91,6 +101,7 @@ class Visual extends React.Component {
             {this.props.musicList[this.props.musicIndex].duration}
           </p>
           <div className="music__progress-bar"></div>
+          <div className="music__progress-bar-current"></div>
           <p className="music__current-time">0:00</p>
           <div className="music__btn-wrap">
             <i onClick={this.pressedBack} className="music__btn material-icons">

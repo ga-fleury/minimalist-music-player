@@ -15,6 +15,7 @@
     min-width: 300px;
     border-radius: 15px;
     background-color: $color-bg;
+    max-width: 300px;
 
     //neumorphic shadow
     background: $color-bg;
@@ -43,7 +44,7 @@
   &__info-wrap {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 0.7rem 0.5rem;
   }
 }
 
@@ -59,6 +60,9 @@
   &__title {
     font-size: 1.5rem;
     color: $color-title;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   &__artist {
     font-size: 1rem;
@@ -77,6 +81,15 @@
     background-color: $color-detail;
     height: 0.5rem;
     border-radius: 10px;
+    width: 100%;
+
+    &-current {
+      height: 0.5rem;
+      width: 10%;
+      background-color: $color-title;
+      margin-top: -0.5rem;
+      border-radius: 10px;
+    }
   }
   &__btn-wrap {
     display: flex;
