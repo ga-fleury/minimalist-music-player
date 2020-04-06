@@ -36,16 +36,20 @@ class App extends React.Component {
     ],
     sound: [
       new Howl({
-        src: ["songs/dissolve.mp3"],
+        src: ["songs/song0.mp3"],
+        format: ['mp3']
       }),
       new Howl({
-        src: ["songs/onemoretime.mp3"],
+        src: ["songs/song1.mp3"],
+        format: ['mp3']
       }),
       new Howl({
-        src: ["songs/sugar.mp3"],
+        src: ["songs/song2.mp3"],
+        format: ['mp3']
       }),
       new Howl({
-        src: ["songs/artyboy.mp3"],
+        src: ["songs/song3.mp3"],
+        format: ['mp3']
       }),
     ],
   };
